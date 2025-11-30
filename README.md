@@ -19,7 +19,9 @@ pip install -r requirements.txt
 ```bash
 source .venv/bin/activate # activate
 
-poe listen
+poe start
+
+prefect --help # not before acivating .venv
 ```
 
 ### Development
