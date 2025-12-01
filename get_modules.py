@@ -53,10 +53,10 @@ def import_modules(dir_name):
     return flows
 
 
-router = APIRouter()
+router = APIRouter(tags=["custom"])
 
 # return a list of all flows that work on this system
 @router.get("/list-flows")
 async def list_flows():
     flows = get_compatible_flows()
-    return {"message": "Hello from custom API"}
+    return {"flows": flows}
